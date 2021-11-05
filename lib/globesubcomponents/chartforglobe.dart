@@ -20,15 +20,7 @@ class _chartforglobeState extends State<chartforglobe> {
     rangevalue = RangeValues(0, len);
     barchartdata =
         data.getdataforchartusglobe(data.globeconfirm[2], data.globefatal[2]);
-    // setState(() {
-    //   if (data.usdailyconfirm.length != 0) {
-    //     data.averageconfirm = data.getusaveragedata(data.usdailyconfirm[3]);
-    //   }
-    //   if (data.usdailyfatal.length != 0) {
-    //     data.averagefatal = data.getusaveragedata(data.usdailyfatal[3]);
-    //   }
-    // });
-    // print(data.averageconfirm);
+  
   }
 
   @override

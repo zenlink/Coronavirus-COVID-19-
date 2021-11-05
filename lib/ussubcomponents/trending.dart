@@ -4,11 +4,9 @@ import '../utility/bulletin.dart';
 import '../data.dart';
 
 class trending extends StatefulWidget {
-  // final Map average;
-  // trending(this.average);
+
   @override
-  // final List pieces;
-  // trending(this.pieces);
+  
 
   _trendingState createState() => _trendingState();
 }
@@ -68,9 +66,6 @@ class _trendingState extends State<trending> {
                         child: Text(
                         x,
                         style: TextStyle(
-                          // color: Data.famousColor[Data.backgroundIndex.value],
-                          // height: 2,
-                          // fontSize: Data.fontSize[Data.fontIndex.value],
                           fontWeight: FontWeight.bold,
                           fontFamily: "font1",
                         ),

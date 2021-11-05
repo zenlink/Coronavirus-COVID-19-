@@ -26,7 +26,6 @@ class data {
   static List globedailyfatal = [];
   static List averageconfirm = [];
   static List averagefatal = [];
-  // static List stateconfirmkey = [];
   static final stateName = ValueNotifier<String>('Alabama');
   static final countryname = ValueNotifier<String>('Afghanistan');
   static final backgroundIndex = ValueNotifier<int>(0);
@@ -44,31 +43,8 @@ class data {
     Color.fromARGB(255, 37, 45, 72),
     Color.fromARGB(255, 12, 64, 80),
   ];
-  static List navBackgroundList = [
-    Colors.teal,
-    Colors.grey.shade800,
-  ];
 
-  static List poemColor = [
-    Colors.teal.shade900,
-    Colors.teal.shade200,
-  ];
-  static List titleColor = [
-    Colors.brown.shade900,
-    Colors.brown.shade100,
-  ];
-  static List singleColor = [
-    Colors.black54,
-    Colors.white,
-  ];
-  static List famousColor = [
-    Colors.brown.shade600,
-    Colors.brown.shade100,
-  ];
-  static List poemBackgroundList = [
-    Color.fromARGB(100, 220, 230, 220),
-    Colors.grey.shade900,
-  ];
+
   static List main_tab_arr = ["US", "State", "Globe", "Country"];
   static List bottom_tab_list = [
     ["table", "chart", "trend"],
@@ -90,11 +66,7 @@ class data {
     null
   ];
 
-  static Map settingObj = {
-    "背景": ["白天", "夜间"],
-    "字体大小": ["16", "18", "20", "22", "24", "26"],
-    "音量": []
-  };
+ 
   static List usarea = [
     "American Samoa",
     "Diamond Princess",

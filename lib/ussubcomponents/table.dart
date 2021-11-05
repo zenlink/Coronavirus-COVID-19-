@@ -69,9 +69,7 @@ class _tableState extends State<table> {
                         child: Row(
                             // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              // Expanded(
-                              //     flex: 5,
-                              //     child: 
+                            
                                   Container(
                                     width:130,
                                     child:TextButton(
@@ -83,9 +81,8 @@ class _tableState extends State<table> {
                                         });
                                       },
                                       child: Row(children: [
-                                        // Icon(Icons.arrow_drop_down),
                                         data.usarea.indexOf(tablekey[i]) < 0
-                                            ? Icon(Icons.arrow_drop_down)
+                                            ? Icon(openList[i]? Icons.keyboard_arrow_up:Icons.keyboard_arrow_down)
                                             : Container(
                                                 padding:
                                                     EdgeInsets.only(left: 24),
@@ -95,9 +92,7 @@ class _tableState extends State<table> {
                                                 style: TextStyle(
                                                     color: Colors.black)))
                                       ]))),
-                              // Expanded(
-                              //     flex: 4,
-                              //     child: 
+                            
                                     Container(
                                     width:90,
                                     child:Column(
@@ -115,9 +110,7 @@ class _tableState extends State<table> {
                                           : Container()
                                     ],
                                   )),
-                              // Expanded(
-                              //     flex: 4,
-                              //     child: 
+                             
                                     Container(
                                     width:85,
                                     child:Column(
@@ -135,9 +128,7 @@ class _tableState extends State<table> {
                                           : Container()
                                     ],
                                   )),
-                              // Expanded(
-                              //     flex: 3,
-                              //     child:
+                           
                                    Container(
                                      width:70,
                                       padding: EdgeInsets.only(right: 8),
@@ -227,158 +218,6 @@ class _tableState extends State<table> {
               })
               .toList()
               .cast<Widget>()),
-
-      //   Column(
-      //       children: stateconfirmkey
-      //           .asMap()
-      //           .entries
-      //           .map((e) {
-      //             int i = e.key;
-      //             String x = e.value;
-      //             return Column(children: [
-      //               Container(
-      //                 height: 50,
-      //                 color: i % 2 == 0 ? Colors.grey.shade300 : null,
-      //                 padding: EdgeInsets.symmetric(vertical: 8, horizontal: 0),
-      //                 child: Row(
-      //                     // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      //                     children: [
-      //                       Expanded(
-      //                           flex: 4,
-      //                           child: TextButton(
-      //                               onPressed: () {
-      //                                 setState(() {
-      //                                   countyconfirmkey = stateconfirmTotal[x]
-      //                                       .keys
-      //                                       .toList()
-      //                                       .sublist(1);
-      //                                   countyfatalkey = statefatalTotal[x]
-      //                                       .keys
-      //                                       .toList()
-      //                                       .sublist(1);
-      //                                   List openListcopy = [...openList];
-      //                                   openListcopy[i] = !openListcopy[i];
-      //                                   openList = openListcopy;
-      //                                 });
-      //                               },
-      //                               child: Row(children: [
-      //                                 Icon(Icons.arrow_drop_down),
-      //                                 Flexible(
-      //                                     child: Text(x,
-      //                                         style:
-      //                                             TextStyle(color: Colors.black)))
-      //                               ]))),
-      //                       Expanded(
-      //                           flex: 3,
-      //                           child: Column(
-      //                             mainAxisAlignment: MainAxisAlignment.center,
-      //                             children: [
-      //                               Text(data.get_number_comma(
-      //                                   stateconfirmTotal[x]["total"][0]
-      //                                       .toString())),
-      //                               stateconfirmTotal[x]["total"][1] != 0
-      //                                   ? Text(data.get_number_comma(
-      //                                       stateconfirmTotal[x]["total"][1]
-      //                                           .toString()))
-      //                                   : Container()
-      //                             ],
-      //                           )),
-      //                       Expanded(
-      //                           flex: 3,
-      //                           child: Column(
-      //                             mainAxisAlignment: MainAxisAlignment.center,
-      //                             children: [
-      //                               Text(data.get_number_comma(statefatalTotal[x]
-      //                                       ["total"][0]
-      //                                   .toString())),
-      //                               statefatalTotal[x]["total"][1] != 0
-      //                                   ? Text(data.get_number_comma(
-      //                                       statefatalTotal[x]["total"][1]
-      //                                           .toString()))
-      //                                   : Container()
-      //                             ],
-      //                           )),
-      //                       Expanded(
-      //                           flex: 2,
-      //                           child: Container(
-      //                               padding: EdgeInsets.only(right: 8),
-      //                               child: Text(
-      //                                 "${(statefatalTotal[x]["total"][0] != 0 ? statefatalTotal[x]["total"][0] * 100 / stateconfirmTotal[x]["total"][0] : 0).toStringAsFixed(1)}%",
-      //                                 textAlign: TextAlign.center,
-      //                               )))
-      //                     ]),
-      //               ),
-      //               openList[i]
-      //                   ? (countyconfirmkey.length != 0
-      //                       ? Column(
-      //                           children:
-      //                               countyconfirmkey.asMap().entries.map((e) {
-      //                           int id = e.key;
-      //                           String y = e.value;
-      //                           return Container(
-      //                             // decoration: BoxDecoration(
-      //                             //   border: Border.all(color: Colors.blue)
-      //                             // ),
-      //                             height: 50,
-      //                             color:
-      //                                 id % 2 == 0 ? Colors.blue.shade100 : null,
-      //                             padding: EdgeInsets.fromLTRB(24, 8, 8, 8),
-      //                             child: Row(children: [
-      //                               Expanded(
-      //                                   flex: 4,
-      //                                   child: Container(
-      //                                       child: Text(y,
-      //                                           style: TextStyle(
-      //                                               color: Colors.black)))),
-      //                               Expanded(
-      //                                   flex: 3,
-      //                                   child: Column(
-      //                                     mainAxisAlignment:
-      //                                         MainAxisAlignment.center,
-      //                                     children: [
-      //                                       Text(data.get_number_comma(
-      //                                           stateconfirmTotal[x][y][0]
-      //                                               .toString())),
-      //                                       stateconfirmTotal[x][y][1] != 0
-      //                                           ? Text(data.get_number_comma(
-      //                                               stateconfirmTotal[x][y][1]
-      //                                                   .toString()))
-      //                                           : Container()
-      //                                     ],
-      //                                   )),
-      //                               Expanded(
-      //                                   flex: 3,
-      //                                   child: Column(
-      //                                     mainAxisAlignment:
-      //                                         MainAxisAlignment.center,
-      //                                     children: [
-      //                                       Text(data.get_number_comma(
-      //                                           statefatalTotal[x][y][0]
-      //                                               .toString())),
-      //                                       statefatalTotal[x][y][1] != 0
-      //                                           ? Text(data.get_number_comma(
-      //                                               statefatalTotal[x][y][1]
-      //                                                   .toString()))
-      //                                           : Container()
-      //                                     ],
-      //                                   )),
-      //                               Expanded(
-      //                                   flex: 2,
-      //                                   child: Container(
-      //                                       // padding: EdgeInsets.only(right:8),
-      //                                       child: Text(
-      //                                     "${(statefatalTotal[x][y][0] != 0 ? statefatalTotal[x][y][0] * 100 / stateconfirmTotal[x][y][0] : 0).toStringAsFixed(1)}%",
-      //                                     textAlign: TextAlign.center,
-      //                                   )))
-      //                             ]),
-      //                           );
-      //                         }).toList())
-      //                       : Container())
-      //                   : Container()
-      //             ]);
-      //           })
-      //           .toList()
-      //           .cast<Widget>()),
     ]));
   }
 }

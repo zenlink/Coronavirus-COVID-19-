@@ -28,7 +28,7 @@ class _navState extends State<nav> with SingleTickerProviderStateMixin {
         fit: BoxFit.cover,
         alignment: Alignment.bottomCenter,
       ),
-      backgroundColor: data.navBackgroundList[data.backgroundIndex.value],
+    
       title: Text("Covid-19 Global Summary",
           style: GoogleFonts.lato(
               textStyle: TextStyle(

@@ -5,9 +5,7 @@ import '../utility/bulletin.dart';
 import '../data.dart';
 
 class subtable extends StatefulWidget {
-  // final Map confirm;
-  // final Map fatal;
-  // subtable(this.confirm, this.fatal);
+ 
   @override
   _subtableState createState() => _subtableState();
 }
@@ -73,9 +71,7 @@ class _subtableState extends State<subtable> {
                 child: Row(
                     // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      // Expanded(
-                      //     flex: 5,
-                      //     child:
+                     
                       Container(
                           width: 130,
                           height: 40,
@@ -114,9 +110,7 @@ class _subtableState extends State<subtable> {
                                   textAlign: TextAlign.center,
                                 )
                               ]))),
-                      // Expanded(
-                      //     flex: 4,
-                      //     child:
+                    
                       Container(
                           width: 90,
                           height: 40,
@@ -158,9 +152,7 @@ class _subtableState extends State<subtable> {
                                   textAlign: TextAlign.center,
                                 )
                               ]))),
-                      // Expanded(
-                      //     flex: 4,
-                      //     child:
+                    
                       Container(
                           width: 85,
                           height: 40,
@@ -203,9 +195,7 @@ class _subtableState extends State<subtable> {
                                   textAlign: TextAlign.center,
                                 )
                               ]))),
-                      // Expanded(
-                      //     flex: 3,
-                      //     child:
+                     
                       Container(
                           height: 40,
                           width: 70,
@@ -288,9 +278,7 @@ class _subtableState extends State<subtable> {
                               child: Row(
                                   // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
-                                    // Expanded(
-                                    //     flex: 5,
-                                    //     child:
+                                  
                                     Container(
                                         width: 130,
                                         padding: EdgeInsets.only(left: 24),
@@ -317,9 +305,7 @@ class _subtableState extends State<subtable> {
                                                 : Container()
                                           ],
                                         )),
-                                    // Expanded(
-                                    //     flex: 4,
-                                    //     child:
+                                   
                                     Container(
                                         width: 85,
                                         child: Column(
@@ -337,9 +323,7 @@ class _subtableState extends State<subtable> {
                                                 : Container()
                                           ],
                                         )),
-                                    // Expanded(
-                                    //     flex: 3,
-                                    //     child:
+                                   
                                     Container(
                                         width: 70,
                                         padding: EdgeInsets.only(right: 8),

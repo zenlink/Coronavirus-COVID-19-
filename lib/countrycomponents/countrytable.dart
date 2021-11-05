@@ -4,9 +4,6 @@ import '../utility/bulletin.dart';
 import '../data.dart';
 
 class countrytable extends StatefulWidget {
-  // final Map confirm;
-  // final Map fatal;
-  // countrytable(this.confirm, this.fatal);
   @override
   _countrytableState createState() => _countrytableState();
 }
@@ -176,9 +173,7 @@ class _countrytableState extends State<countrytable> {
                                   textAlign: TextAlign.center,
                                 )
                               ]))),
-                  // Expanded(
-                  //     flex: 4,
-                  //     child:
+                
                        Container(
                           width: 85,
                           height: 40,
@@ -227,9 +222,7 @@ class _countrytableState extends State<countrytable> {
                                   textAlign: TextAlign.center,
                                 )
                               ]))),
-                  // Expanded(
-                  //     flex: 3,
-                  //     child:
+                
                        Container(
                           width: 70,
                           height: 40,
@@ -319,9 +312,7 @@ class _countrytableState extends State<countrytable> {
                 child:Row(
                                   // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
-                                    // Expanded(
-                                    //     flex: 5,
-                                    //     child:
+                                  
                                          Container(
                                           width:130,
                                             padding: EdgeInsets.only(left: 24),
@@ -344,9 +335,7 @@ class _countrytableState extends State<countrytable> {
                                                 : Container()
                                           ],
                                         )),
-                                    // Expanded(
-                                    //     flex: 4,
-                                    //     child: 
+                                  
                                         Container(
                                           width:85,child: Column(
                                           mainAxisAlignment:
@@ -360,9 +349,7 @@ class _countrytableState extends State<countrytable> {
                                                 : Container()
                                           ],
                                         )),
-                                    // Expanded(
-                                    //     flex: 3,
-                                    //     child: 
+                                  
                                         Container(
                                            width:70,
                                             padding: EdgeInsets.only(right: 8),
@@ -386,16 +373,13 @@ class _countrytableState extends State<countrytable> {
                 child:Row(
                         // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          // Expanded(
-                          //     flex: 4,
-                          //     child:
+                        
                                Container(
                                  width:130,
                                   padding: EdgeInsets.only(left: 24),
                                   child: Text(data.countryname.value,
                                       style: TextStyle(color: Colors.black))),
-                          // Expanded(
-                          //     flex: 3,
+                        
                                Container(
                                  width:90,child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -410,8 +394,7 @@ class _countrytableState extends State<countrytable> {
                                       : Container()
                                 ],
                               )),
-                          // Expanded(
-                          //     flex: 3,
+                        
                               Container(
                                  width:85, child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -426,9 +409,7 @@ class _countrytableState extends State<countrytable> {
                                       : Container()
                                 ],
                               )),
-                          // Expanded(
-                          //     flex: 2,
-                          //     child:
+                        
                                Container(
                                  width:70,
                                   padding: EdgeInsets.only(right: 8),

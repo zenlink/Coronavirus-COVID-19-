@@ -6,9 +6,6 @@ class selsectbox extends StatefulWidget {
   final callback;
   selsectbox(this.statekey, [this.callback]);
   @override
-  // final List pieces;
-  // table(this.pieces);
-
   _selsectboxState createState() => _selsectboxState();
 }
 
@@ -46,6 +43,7 @@ class _selsectboxState extends State<selsectbox> {
               widget.callback();
             },
             items: widget.statekey.map((location) {
+              // print(location);
               return DropdownMenuItem(
                 child: Text(location),
                 value: location,

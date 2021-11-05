@@ -6,8 +6,7 @@ class rangeslider extends StatefulWidget {
   final callback;
   rangeslider(this.date, this.callback);
   @override
-  // final List pieces;
-  // table(this.pieces);
+
 
   _rangesliderState createState() => _rangesliderState();
 }

@@ -54,22 +54,11 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    // return ValueListenableBuilder(
-    //     valueListenable: Data.fontIndex,
-    //     builder: (BuildContext context, int value, Widget? child) {
-    //       return ValueListenableBuilder(
-    //           valueListenable: Data.backgroundIndex,
-    //           builder: (BuildContext context, int value, Widget? child) {
-    //             return ValueListenableBuilder(
-    //                 valueListenable: Data.isHome,
-    //                 builder: (BuildContext context, bool value, Widget? child) {
-    // Data.ttsAgent.isPlaying;
+   
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-          primaryColor: data.navBackgroundList[data.backgroundIndex.value],
-          // scaffoldBackgroundColor:
-          //     data.backgroundList[data.backgroundIndex.value],
+        
         ),
         home: Scaffold(
             appBar: nav(data.tabController, () {}),

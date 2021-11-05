@@ -7,8 +7,7 @@ class trendingforglobe extends StatefulWidget {
   Map average;
   trendingforglobe(this.average);
   @override
-  // final List pieces;
-  // trending(this.pieces);
+ 
 
   _trendingforglobeState createState() => _trendingforglobeState();
 }
@@ -59,9 +58,6 @@ class _trendingforglobeState extends State<trendingforglobe> {
                         child:  Text(
                       x,
                       style: TextStyle(
-                        // color: Data.famousColor[Data.backgroundIndex.value],
-                        // height: 2,
-                        // fontSize: Data.fontSize[Data.fontIndex.value],
                         fontWeight: FontWeight.bold,
                         fontFamily: "font1",
                       ),

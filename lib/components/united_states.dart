@@ -9,8 +9,6 @@ import "../bottom_nav.dart";
 import "../data.dart";
 
 class united_states extends StatefulWidget {
-  // TabController? tabController;
-  // united_states(this.tabController);
   @override
   _united_statesState createState() => _united_statesState();
 }
@@ -19,29 +17,31 @@ class _united_statesState extends State<united_states>
     with SingleTickerProviderStateMixin {
   AutoScrollController? _scrollControll;
   TabController? _sub_tabController;
+   int myIndex = -1;
 
   @override
   void initState() {
-    _sub_tabController =
-        TabController(length: data.bottom_tab_list[data.mainindex].length, vsync: this);
+     myIndex = data.mainindex;
+    _sub_tabController = TabController(
+        length: data.bottom_tab_list[data.mainindex].length, vsync: this);
     setState(() {
       data.usdailyconfirm =
           data.getusdailydata(data.usconfirm[3], data.usconfirm[4]);
       data.usdailyfatal = data.getusdailydata(data.usfatal[3], data.usfatal[4]);
     });
-    _scrollControll = AutoScrollController(
-        viewportBoundaryGetter: () =>
-            Rect.fromLTRB(0, 0, 0, MediaQuery.of(context).padding.bottom));
+    // _scrollControll = AutoScrollController(
+    //     viewportBoundaryGetter: () =>
+    //         Rect.fromLTRB(0, 0, 0, MediaQuery.of(context).padding.bottom));
   }
 
   @override
   Widget build(BuildContext context) {
+   
     return Scaffold(
-        body: TabBarView(
-            controller: _sub_tabController,
-            children: [table(), chart(), trending(), 
-            // map()
-            ]),
-        bottomNavigationBar: bottom_nav(_sub_tabController));
+        body: TabBarView(controller: _sub_tabController, children: [
+          table(), chart(), trending(),
+          // map()
+        ]),
+        bottomNavigationBar: bottom_nav(_sub_tabController,myIndex));
   }
 }

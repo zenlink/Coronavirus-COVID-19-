@@ -19,10 +19,6 @@ class _tabletitleState extends State<tabletitle> {
   Map stateconfirmTotal = {};
   List stateconfirmkey = [];
   Map statefatalTotal = {};
-  // List statefatalkey = [];
-  // List countyconfirmkey = [];
-  // List countyfatalkey = [];
-  // List openList = [];
   bool isstateup = false;
   bool iscaseup = false;
   bool isdeath = false;
@@ -39,31 +35,19 @@ class _tabletitleState extends State<tabletitle> {
         // openList = List.filled(stateconfirmkey.length, false);
       });
     }
-    // if (data.usfatal.length != 0) {
-    //   setState(() {
-    //     statefatalTotal = data.usfatal[2];
-    //     statefatalkey = statefatalTotal.keys.toList();
-    //   });
-    // }
+  
   }
 
   @override
   Widget build(BuildContext context) {
-    // listfortable = [];
-    // objfortable.forEach((key, value) {
-    //   listfortable.add({key: value});
-    // });
-    // tablekey = objfortable.keys.toList();
-    // openList = List.filled(tablekey.length, false);
+   
     return SingleChildScrollView(
       physics: BouncingScrollPhysics(),
       scrollDirection: Axis.horizontal,
       child: Row(
           // mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            // Expanded(
-            //     flex: 5,
-            //     child:
+            
             Container(
                 width: 130,
                 height: 40,
@@ -101,9 +85,7 @@ class _tabletitleState extends State<tabletitle> {
                         textAlign: TextAlign.center,
                       )
                     ]))),
-            // Expanded(
-            //     flex: 4,
-            //     child:
+          
             Container(
                 width: 90,
                 height: 40,
@@ -146,9 +128,7 @@ class _tabletitleState extends State<tabletitle> {
                         textAlign: TextAlign.center,
                       )
                     ]))),
-            // Expanded(
-            //     flex: 4,
-            //     child:
+           
             Container(
                 width: 85,
                 height: 40,
@@ -188,9 +168,7 @@ class _tabletitleState extends State<tabletitle> {
                         textAlign: TextAlign.center,
                       )
                     ]))),
-            // Expanded(
-            //     flex: 3,
-            // child:
+           
             Container(
                 width: 70,
                 height: 40,

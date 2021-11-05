@@ -108,12 +108,7 @@ class _bulletinState extends State<bulletin> {
                               fontSize: 18,
                               height: 1.5,
                             )),
-                        // Text("${data.get_number_comma(widget.fatal.toString())}",
-                        //     style: TextStyle(
-                        //       color: Colors.white,
-                        //       fontSize: 16,
-                        //       height: 1.5,
-                        //     )),
+                       
                         Text("+${data.get_number_comma(widget.newfatal.toString())}",
                             style: TextStyle(
                               color: Colors.white,

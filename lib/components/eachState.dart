@@ -7,8 +7,6 @@ import "../bottom_nav.dart";
 import "../data.dart";
 
 class eachState extends StatefulWidget {
-  // TabController? tabController;
-  // eachState(this.tabController);
   @override
   _eachStateState createState() => _eachStateState();
 }
@@ -28,14 +26,16 @@ class _eachStateState extends State<eachState>
   Map statedailyconfirmaddition = {};
   Map statedailyfatal = {};
   Map statedailyfataladdition = {};
+  int myIndex = -1;
 
   @override
   void initState() {
+    myIndex = data.mainindex;
       _sub_tabController =
         TabController(length: data.bottom_tab_list[data.mainindex].length, vsync: this);
-    _scrollControll = AutoScrollController(
-        viewportBoundaryGetter: () =>
-            Rect.fromLTRB(0, 0, 0, MediaQuery.of(context).padding.bottom));
+    // _scrollControll = AutoScrollController(
+    //     viewportBoundaryGetter: () =>
+    //         Rect.fromLTRB(0, 0, 0, MediaQuery.of(context).padding.bottom));
     if (data.usconfirm.length != 0) {
       setState(() {
         stateconfirmTotal = data.usconfirm[2];
@@ -73,6 +73,6 @@ class _eachStateState extends State<eachState>
           statechart(),
           // statemap()
         ]),
-        bottomNavigationBar: bottom_nav(_sub_tabController));
+        bottomNavigationBar: bottom_nav(_sub_tabController,myIndex));
   }
 }

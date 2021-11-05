@@ -8,11 +8,7 @@ import '../data.dart';
 
 class countrychart extends StatefulWidget {
   @override
-  // final List confirmaddition;
-  // final List confirm;
-  // final List fataladdition;
-  // final List fatal;
-  // countrychart(this.confirmaddition, this.confirm, this.fataladdition, this.fatal);
+
 
   _countrychartState createState() => _countrychartState();
 }
