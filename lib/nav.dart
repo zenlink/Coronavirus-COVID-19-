@@ -32,21 +32,11 @@ class _navState extends State<nav> with SingleTickerProviderStateMixin {
       title: Text("Covid-19 Global Summary",
           style: GoogleFonts.lato(
               textStyle: TextStyle(
-                  // backgroundColor: Color.fromARGB(125, 10, 10, 10),
                   color: Colors.white,
-                  // fontFamily: "Noto Serif, serif",
                   fontSize: 18,
                   fontWeight: FontWeight.bold))),
       centerTitle: true,
-      // leading: Data.isHome.value
-      //     ? null
-      //     : IconButton(
-      //         onPressed: () {
-      //           Data.isHome.value = true;
-      //           Data.isAuthorGroup = false;
-      //            Data.authorSearchIndex.value = -1;
-      //         },
-      //         icon: Icon(Icons.arrow_back)),
+    
       actions: [
         IconButton(
             onPressed: () {
@@ -121,15 +111,12 @@ class _navState extends State<nav> with SingleTickerProviderStateMixin {
           isScrollable: true,
           indicatorColor: Colors.white,
           labelColor: Colors.yellow,
-          // labelColor: Color.fromARGB(255,157,63,171),
           indicatorWeight: 3,
           tabs: data.main_tab_arr
               .map((x) => (Text(x,
                   style: GoogleFonts.lato(
                       textStyle: TextStyle(
                     fontWeight: FontWeight.bold,
-                    // color: Colors.red.shade900,
-                    //  backgroundColor: Color.fromARGB(125, 10, 10, 10),
                     fontSize: 16,
                   )))))
               .toList()),

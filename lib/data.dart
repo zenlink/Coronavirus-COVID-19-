@@ -44,7 +44,6 @@ class data {
     Color.fromARGB(255, 12, 64, 80),
   ];
 
-
   static List main_tab_arr = ["US", "State", "Globe", "Country"];
   static List bottom_tab_list = [
     ["table", "chart", "trend"],
@@ -66,7 +65,6 @@ class data {
     null
   ];
 
- 
   static List usarea = [
     "American Samoa",
     "Diamond Princess",
@@ -183,10 +181,7 @@ class data {
       int p2 = item.indexOf('"', p1 + 1);
       String state_county_name = item.substring(p1 + 1, p2);
       List state_county_list = state_county_name.split(",");
-      // if (state_county_list[1].indexOf(" ") > -1 &&
-      //     state_county_list[1].indexOf(" ") == 0) {
-      //   state_county_list[1] = state_county_list[1].substring(1);
-      // }
+
       if (num == 1) {
         county_data = item.substring(p2 + 2).split(",");
       } else {
@@ -512,11 +507,7 @@ class data {
 
     for (var i = length - 2; i > count - 2; i--) {
       usaveragestartsum += (dailydata[i - count + 1] - dailydata[i + 1]) as int;
-      // int temp =
-      //     ((dailydata[i - count + 1] - dailydata[i + 1]) / count).floor();
-      // // arr.add([temp, usaveragestart]);
-      // // arr.add([i - count + 1, i + 1]);
-      // usaveragestart += temp;
+
       usaveragestart = (usaveragestartsum / count).floor();
       usaveragetList.insert(0, usaveragestart);
     }
@@ -615,115 +606,4 @@ class data {
     arr.remove("total");
     return arr;
   }
-  // static getusnumber(data) {
-  //   print(data);
-  //   Map ustotalobj = {};
-  //   for (var key in data.keys) {
-  //     int total = 0;
-  //     int additiontotal = 0;
-  //     if (data[key].runtimeType is Map) {
-  //       Map countyobj = data[key];
-  //       List arr = [];
-  //       for (var county in countyobj.keys) {
-  //         int len = countyobj[county].length;
-  //         int preNum = int.parse(countyobj[county][len - 2]);
-  //         int curNum = int.parse(countyobj[county][len - 1]);
-  //         int newAddition = curNum - preNum;
-  //         arr = [curNum, newAddition];
-  //         total += curNum;
-  //         additiontotal += newAddition;
-  //         if (ustotalobj[key] == null) {
-  //           ustotalobj[key] = {};
-  //         }
-  //         ustotalobj[key][county] = arr;
-  //       }
-  //       ustotalobj[key]["total"] = [total, additiontotal];
-  //     } else {}
-  //   }
-  // print(ustotalobj);
 }
-
-// static Future getAuthorPoetries(
-//     callback, dynasty, author, start, count) async {
-//   try {
-//     String url =
-//         "${host}/api/getAuthorPoetriesF?dynasty=${dynasty}&author=${author}&start=${start}&count=${count}";
-
-//     var res = await get(
-//       Uri.parse(url),
-//       headers: {"Accept": 'application/json'},
-//     );
-
-//     if (res.statusCode == 200) {
-//       Map body = json.decode(res.body);
-//       callback(body);
-//     } else {
-//       print("Failed ${res.statusCode}");
-//     }
-//   } catch (error) {
-//     print(error);
-//   }
-// }
-
-// static Future getSearchAuthorsF(callback, author, start, count) async {
-//   try {
-//     String url =
-//         "${host}/api/getSearchAuthorsF?name=${author}&start=${start}&count=${count}";
-//     var res = await get(
-//       Uri.parse(url),
-//       headers: {"Accept": 'application/json'},
-//     ).timeout(Duration(seconds: 60));
-
-//     if (res.statusCode == 200) {
-//       Map body = json.decode(res.body);
-//       callback(body);
-//     } else {
-//       print("Failed ${res.statusCode}");
-//       callback(null);
-//     }
-//   } catch (error) {
-//     print(error);
-//     callback(null);
-//   }
-// }
-
-// static void saveItem(key, value) async {
-//   SharedPreferences prefs = await SharedPreferences.getInstance();
-//   if (value is Map) {
-//     Map<String, dynamic> newV = {};
-//     value.forEach((key, value) {
-//       newV[key.toString()] = value;
-//     });
-//     prefs.setString(key, jsonEncode(newV));
-//   }
-//   if (value is int) {
-//     prefs.setInt(key, value);
-//   }
-// }
-
-// static List favoriteList = ["favoriteAuthor", "favoritePoetry"];
-// static List settingList = ["背景", "字体大小"];
-// static void getItem(keyList, callback) async {
-//   SharedPreferences prefs = await SharedPreferences.getInstance();
-//   Map<String, dynamic> ret = {};
-//   for (int i = 0; i < favoriteList.length; i++) {
-//     if (keyList.any((item) => item == favoriteList[i])) {
-//       Map v = {};
-//       String? s = prefs.getString(favoriteList[i]);
-//       if (s != null) {
-//         v = jsonDecode(s);
-//       }
-//       ret[favoriteList[i]] = v;
-//     }
-//   }
-//   for (int i = 0; i < settingList.length; i++) {
-//     if (keyList.any((item) => item == settingList[i])) {
-//       int? s = prefs.getInt(settingList[i]);
-//       if (s != null) {
-//         ret[settingList[i]] = s;
-//       }
-//     }
-//   }
-//   callback(ret);
-// }
-// }

@@ -32,7 +32,7 @@ class _tabletitleState extends State<tabletitle> {
       setState(() {
         stateconfirmTotal = widget.confirm;
         stateconfirmkey = widget.confirm.keys.toList();
-        // openList = List.filled(stateconfirmkey.length, false);
+        
       });
     }
   
@@ -91,9 +91,7 @@ class _tabletitleState extends State<tabletitle> {
                 height: 40,
                 color: Colors.red.shade700,
                 child: TextButton(
-                    // style: TextButton.styleFrom(
-                    //    primary: Colors.grey,
-                    // ),
+                  
                     onPressed: () {
                       setState(() {
                         iscaseup = !iscaseup;

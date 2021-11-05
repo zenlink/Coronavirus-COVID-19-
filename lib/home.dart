@@ -18,13 +18,10 @@ class home extends StatefulWidget {
 
 class _homeState extends State<home> with SingleTickerProviderStateMixin {
   AutoScrollController? _scrollControll;
-  // TabController? _sub_tabController;
   bool isloading = true;
 
   @override
   void initState() {
-    // _sub_tabController =
-    //     TabController(length: data.bottom_tab_list.length, vsync: this);
     _scrollControll = AutoScrollController(
         viewportBoundaryGetter: () =>
             Rect.fromLTRB(0, 0, 0, MediaQuery.of(context).padding.bottom));
@@ -45,7 +42,6 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
     setState(() {
       data.globeconfirm = data.getglobetableobj(data1);
       data.globefatal = data.getglobetableobj(data2);
-      // isloading = false;
     });
   }
 

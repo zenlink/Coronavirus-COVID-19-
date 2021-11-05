@@ -37,7 +37,6 @@ class _bottom_navState extends State<bottom_nav>
                       child: Text(x,
                           style: TextStyle(
                               fontSize: data.bottomSize[data.fontIndex.value],
-                              // fontFamily: "font1",
                               fontWeight: FontWeight.bold)));
                 })
                 .toList()
