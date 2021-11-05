@@ -20,9 +20,7 @@ class _countryState extends State<country> with SingleTickerProviderStateMixin {
     myIndex = data.mainindex;
     _sub_tabController = TabController(
         length: data.bottom_tab_list[data.mainindex].length, vsync: this);
-    // _scrollControll = AutoScrollController(
-    //     viewportBoundaryGetter: () =>
-    //         Rect.fromLTRB(0, 0, 0, MediaQuery.of(context).padding.bottom));
+    
     if (data.globedailyconfirm.length == 0) {
       setState(() {
         data.globedailyconfirm =
@@ -41,8 +39,8 @@ class _countryState extends State<country> with SingleTickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Scaffold(
         body: TabBarView(controller: _sub_tabController, children: [
-          countrytable(),
-          countrychart(),
+          countrytable(myIndex),
+          countrychart(myIndex),
           //  countrymap()
         ]),
         bottomNavigationBar: bottom_nav(_sub_tabController,myIndex));

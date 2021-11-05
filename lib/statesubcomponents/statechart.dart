@@ -7,9 +7,9 @@ import "../utility/rangeslider.dart";
 import '../data.dart';
 
 class statechart extends StatefulWidget {
+  final int myIndex;
+  statechart(this.myIndex);
   @override
- 
-
   _statechartState createState() => _statechartState();
 }
 
@@ -18,7 +18,7 @@ class _statechartState extends State<statechart> {
   late RangeValues rangevalue;
   double len = data.usconfirm[4].length.toDouble();
   List barchartdata = [];
-    int count = 10;
+  int count = 10;
 
   @override
   void initState() {
@@ -38,7 +38,8 @@ class _statechartState extends State<statechart> {
           if (data.usarea.indexOf(data.stateName.value) < 0) {
             barchartdata = data.getdataforstatecountry(
                 data.usconfirm[2][data.stateName.value],
-                data.usfatal[2][data.stateName.value], data.stateName.value);
+                data.usfatal[2][data.stateName.value],
+                data.stateName.value);
           }
           return SingleChildScrollView(
               child: Column(
@@ -50,7 +51,7 @@ class _statechartState extends State<statechart> {
                   data.usfatal[2][data.stateName.value]["total"][1],
                   data.stateName.value),
               selsectbox(
-                stateconfirmkey,
+                stateconfirmkey,widget.myIndex
               ),
               Container(
                   margin: EdgeInsets.all(4),
@@ -61,11 +62,13 @@ class _statechartState extends State<statechart> {
                   height: 500,
                   child: MultipLineChart(
                       data.usconfirm[4],
-                       data.getusaveragedata(data.usdailyconfirm[2][data.stateName.value],count),
+                      data.getusaveragedata(
+                          data.usdailyconfirm[2][data.stateName.value], count),
                       data.usdailyconfirm[0][data.stateName.value],
                       rangevalue,
                       "Confirmed cases",
-                      "10-day average new cases", count-1)),
+                      "10-day average new cases",
+                      count - 1)),
               rangeslider(data.usconfirm[4], (values) {
                 setState(() {
                   rangevalue = values;
@@ -80,11 +83,13 @@ class _statechartState extends State<statechart> {
                   height: 500,
                   child: MultipLineChart(
                       data.usconfirm[4],
-                       data.getusaveragedata(data.usdailyfatal[2][data.stateName.value],count),
+                      data.getusaveragedata(
+                          data.usdailyfatal[2][data.stateName.value], count),
                       data.usdailyfatal[0][data.stateName.value],
                       rangevalue,
                       "Fatal cases",
-                      "10-day average new death", count-1)),
+                      "10-day average new death",
+                      count - 1)),
               if (data.usarea.indexOf(data.stateName.value) < 0)
                 Container(
                     margin: EdgeInsets.all(4),

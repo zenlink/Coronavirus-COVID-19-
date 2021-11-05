@@ -3,8 +3,9 @@ import "../data.dart";
 
 class selsectbox extends StatefulWidget {
   final List<String> statekey;
+  final int myIndex;
   final callback;
-  selsectbox(this.statekey, [this.callback]);
+  selsectbox(this.statekey, this.myIndex,[this.callback]);
   @override
   _selsectboxState createState() => _selsectboxState();
 }
@@ -28,13 +29,13 @@ class _selsectboxState extends State<selsectbox> {
             // hint: Text('Please choose a location'),
             iconSize: 36,
             icon: Icon(Icons.arrow_drop_down, color: Colors.black),
-            value: data.mainindex == 1
+            value: widget.myIndex == 1
                 ? data.stateName.value
                 : data.countryname.value,
             isExpanded: true,
             onChanged: (String? value) {
               setState(() {
-                if (data.mainindex == 1) {
+                if (widget.myIndex == 1) {
                   data.stateName.value = value!;
                 } else {
                   data.countryname.value = value!;

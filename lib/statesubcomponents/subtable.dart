@@ -5,7 +5,8 @@ import '../utility/bulletin.dart';
 import '../data.dart';
 
 class subtable extends StatefulWidget {
- 
+  final int myIndex;
+  subtable(this.myIndex);
   @override
   _subtableState createState() => _subtableState();
 }
@@ -55,7 +56,7 @@ class _subtableState extends State<subtable> {
                 data.usfatal[2][data.stateName.value]["total"][0],
                 data.usfatal[2][data.stateName.value]["total"][1],
                 data.stateName.value),
-            selsectbox(stateconfirmkey, () {
+            selsectbox(stateconfirmkey,widget.myIndex, () {
               setState(() {
                 stateconfirmTotal = data.usconfirm[2][data.stateName.value];
                 statefatalTotal = data.usfatal[2][data.stateName.value];

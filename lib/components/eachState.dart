@@ -69,8 +69,8 @@ class _eachStateState extends State<eachState>
   Widget build(BuildContext context) {
     return Scaffold(
         body: TabBarView(controller: _sub_tabController, children: [
-          subtable(),
-          statechart(),
+          subtable(myIndex),
+          statechart(myIndex),
           // statemap()
         ]),
         bottomNavigationBar: bottom_nav(_sub_tabController,myIndex));
